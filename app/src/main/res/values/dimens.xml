@@ -4,5 +4,4 @@
     <dimen name="margin_large">24dp</dimen>
     <dimen name="padding_medium">16dp</dimen>
     <dimen name="image_medium">200dp</dimen>
-    <dimen name="image_medium">200dp</dimen>
 </resources>

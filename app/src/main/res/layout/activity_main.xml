@@ -22,8 +22,7 @@
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <ImageView
-        android:background="@android:color/darker_gray"
+    <com.bryonnicoson.customfancontroller.DialView
         app:layout_constraintTop_toBottomOf="@id/customViewLabel"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
