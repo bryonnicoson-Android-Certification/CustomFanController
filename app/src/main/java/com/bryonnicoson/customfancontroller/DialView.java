@@ -54,7 +54,22 @@ public class DialView extends View {
         mDialPaint.setColor(Color.GRAY);
         // initialize current selection
         mActiveSelection = 0;
-        // todo: set up onClick listener for this view
+        // set up onClick listener for this view
+        setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // rotate selection to the next valid choice
+                mActiveSelection = (mActiveSelection + 1) % SELECTION_COUNT;
+                // set dial background color to green if selection is >= 1
+                if (mActiveSelection >= 1) {
+                    mDialPaint.setColor(Color.GREEN);
+                } else {
+                    mDialPaint.setColor(Color.GRAY);
+                }
+                // redraw the view - invalidate forces call to onDraw
+                invalidate();
+            }
+        });
     }
 
     //  when layout is inflated or view has changed - calc radius from width and height
